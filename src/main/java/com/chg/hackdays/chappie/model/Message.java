@@ -3,22 +3,27 @@ package com.chg.hackdays.chappie.model;
 import java.time.ZonedDateTime;
 
 public class Message {
-    int id;
+    String id;
     int conversation;
-    int replyTo;
+    String replyTo;
     String source;
     String target;
     String topic;
     String type;
+    String mime;
     String text;
     ZonedDateTime timestamp;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public void setId(MessageId msgId){
+        setId(msgId.toString());
     }
 
     public int getConversation() {
@@ -29,11 +34,11 @@ public class Message {
         this.conversation = conversation;
     }
 
-    public int getReplyTo() {
+    public String getReplyTo() {
         return replyTo;
     }
 
-    public void setReplyTo(int replyTo) {
+    public void setReplyTo(String replyTo) {
         this.replyTo = replyTo;
     }
 
@@ -67,6 +72,14 @@ public class Message {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getMime() {
+        return mime;
+    }
+
+    public void setMime(String mime) {
+        this.mime = mime;
     }
 
     public String getText() {
