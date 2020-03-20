@@ -1,6 +1,8 @@
 package com.chg.hackdays.chappie.model;
 
 import java.time.ZonedDateTime;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Message {
     String id;
@@ -13,6 +15,7 @@ public class Message {
     String mime;
     String text;
     ZonedDateTime timestamp;
+    final Map<String,String> attributes = new HashMap<>();
 
     public String getId() {
         return id;
@@ -96,5 +99,9 @@ public class Message {
 
     public void setTimestamp(ZonedDateTime timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public Map<String, String> getAttributes() {
+        return attributes;
     }
 }
