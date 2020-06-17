@@ -11,8 +11,14 @@ public class ResponseStatus {
         return error(ex.getMessage());
     }
 
-    final boolean success;
-    final String error;
+    boolean success;
+    String error;
+
+    /** @deprecated  This only exists to make Jackson happy. For general purposes, both properties are final and the other constructor should be used
+     */
+    @Deprecated
+    public ResponseStatus() {
+    }
 
     public ResponseStatus(boolean success, String error) {
         this.success = success;

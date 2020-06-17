@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Message {
     String id;
-    int conversation;
+    Long conversation;
     String replyTo;
     String source;
     String target;
@@ -29,11 +29,11 @@ public class Message {
         setId(msgId.toString());
     }
 
-    public int getConversation() {
+    public Long getConversation() {
         return conversation;
     }
 
-    public void setConversation(int conversation) {
+    public void setConversation(Long conversation) {
         this.conversation = conversation;
     }
 
