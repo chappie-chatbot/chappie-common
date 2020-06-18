@@ -24,4 +24,10 @@ public class StringUtil {
     public static boolean isBlank(String str) {
         return str == null || str.trim().isEmpty();
     }
+
+    public static String toString(Object o) {
+        if (o == null)
+            return null;
+        return o.toString();
+    }
 }

@@ -1,5 +1,7 @@
 package com.chg.hackdays.chappie.model;
 
+import com.chg.hackdays.chappie.util.StringUtil;
+
 import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -103,5 +105,11 @@ public class Message {
 
     public Map<String, String> getAttributes() {
         return attributes;
+    }
+
+    public void addAttributes(Map<?, ?> newAttributes) {
+        for (Map.Entry<?, ?> e : newAttributes.entrySet()) {
+            attributes.put(StringUtil.toString(e.getKey()), StringUtil.toString(e.getValue()));
+        }
     }
 }
