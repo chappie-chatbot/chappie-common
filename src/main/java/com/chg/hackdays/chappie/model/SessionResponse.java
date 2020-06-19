@@ -1,23 +1,24 @@
 package com.chg.hackdays.chappie.model;
 
 public class SessionResponse extends Response {
-    int sessionId;
-    int userId;
+    String sessionId;
+    Long userId;
     String username;
+    Long currentConversationId;
 
-    public int getSessionId() {
+    public String getSessionId() {
         return sessionId;
     }
 
-    public void setSessionId(int sessionId) {
+    public void setSessionId(String sessionId) {
         this.sessionId = sessionId;
     }
 
-    public int getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -27,5 +28,13 @@ public class SessionResponse extends Response {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public void setCurrentConversationId(Long currentConversationId) {
+        this.currentConversationId = currentConversationId;
+    }
+
+    public Long getCurrentConversationId() {
+        return currentConversationId;
     }
 }
